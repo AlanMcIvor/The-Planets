@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Source+Sans+3:wght@300;400&display=swap');
+
+/* font-family: 'Oswald', sans-serif;
+font-family: 'Source Sans 3', sans-serif; */
+
+:root{
+    --ff-main: 'Oswald', sans-serif;
+    --ff-accent: 'Source Sans 3', sans-serif;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("images/background-home-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100dvh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.icon{
+    margin-left: 10rem;
+    position: relative;
+}
+
+.icon::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 500px;
+    height: 1px;
+    border-top: 1px solid white;
+    opacity: 0.4;
+    margin: 0 2rem;
+}
+
+/* nav bar */
+
+.nav-container{
+    margin-right: 2rem;
+    right: 0;
+    width: 55%;
+    background: rgba(68, 68, 68, 0.37);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.3rem;
+    list-style: none;
+    margin: 0 25px
+}
+
+.nav-link{
+    text-decoration: none;
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-300);
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+/* home main */
+.home-main{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-left: 10rem;
+    
+}
+.home-main h3, p{
+    font-family: var(--ff-accent);
+    line-height: 1.4;
+    font-size: 25px;
+}
+
+.home-main p{
+    font-weight: var(--fw-300);
+}
+
+.home-main h1{
+    font-family: var(--ff-main);
+    font-weight: var(--fw-400);
+    font-size: 7em;
+    letter-spacing: 2px;
+}
+
+
+#home::before, #sun::before, #inner::before, #asteroid::before, #outer::before{
+    font-weight: var(--fw-500);
+    margin-right: 0.8rem;
+    opacity: 0.6;
+} 
+
+#home::before{
+    content: "01";
+}
+
+#sun::before{
+    content: "02";
+}
+
+#inner::before{
+    content: "03";
+}
+
+#asteroid::before{
+    content: "04";
+}
+
+#outer::before{
+    content: "05";
+}
+/* active class */
+
+
