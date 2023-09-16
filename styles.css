@@ -19,50 +19,36 @@ font-family: 'Source Sans 3', sans-serif; */
 }
 
 body{
+    height: 100dvh;
+    height: 100vh;
     background-image: url("images/background-home-desktop.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100dvh;
-    height: 100vh;
-    overflow: hidden;
 }
 
-header{
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
+@media screen and (max-width: 1300px) {
+    body{
+        background-image: url("images/background-home-tablet.jpg");
+    }
 }
 
-.icon{
-    margin-left: 10rem;
-    position: relative;
-}
-
-.icon::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 500px;
-    height: 1px;
-    border-top: 1px solid white;
-    opacity: 0.4;
-    margin: 0 2rem;
-}
 
 /* nav bar */
 
 .nav-container{
-    margin-right: 2rem;
+    position: fixed;
     right: 0;
-    width: 55%;
-    background: rgba(68, 68, 68, 0.37);
+    margin-right: 2rem;
+    margin-top: 2rem;
+    width: 850px;
+    background: rgba(75, 68, 68, 0.37);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.4px);
     -webkit-backdrop-filter: blur(5.4px);
 }
+
+
 
 .nav-bar{
     display: flex;
@@ -81,6 +67,51 @@ header{
     letter-spacing: 2px;
 }
 
+@media screen and (max-width: 1300px) {
+    .nav-container{
+        position: relative;
+        margin: 2rem auto;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .nav-bar{
+        flex-direction: column;
+        height: 100dvh;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .nav-container{
+        margin-top: 0;
+        width: 100%;
+    }
+
+
+    .nav-link{
+
+        font-size: 28px;
+   
+    }
+
+    li{
+    font-weight: var(--fw-500);
+
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    .hide{
+        display: none;
+    }
+    
+    
+    
+}
+
+
 
 /* home main */
 .home-main{
@@ -88,10 +119,11 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80%;
+    height: 90%;
     max-width: 600px;
     text-align: center;
-    margin-left: 10rem;
+    margin-left: 8rem;
+    
     
 }
 .home-main h3, p{
@@ -110,6 +142,14 @@ header{
     font-size: 7em;
     letter-spacing: 2px;
 }
+
+@media screen and (max-width: 1300px) {
+    .home-main{
+        margin: 2rem auto;
+        height: 75%;
+    }
+}
+
 
 
 #home::before, #sun::before, #inner::before, #asteroid::before, #outer::before{
